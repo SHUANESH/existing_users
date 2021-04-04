@@ -66,18 +66,18 @@ async function results_list() {
 
             if(addUser.firsName.length > 0 && addUser.lastName.length > 0 &&addUser.age.length > 0 &&addUser.email.length > 0 &&addUser.phone.length > 0){
 
-                container.innerHTML += ` <a href="file:///C:/l1/practice%20on%20js/new%20js%20e6/%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%9C%D7%A4%D7%A1%D7%97/users.html" id=${addUser.id++} onclick="userNewPage(event)" target="_blank">
+                container.innerHTML += ` 
                 <div id="div_new_user">
                 <h5> First Name: ${addUser.firsName} </h5>
                 <h5> Last Name:${addUser.lastName} </h5>
-               
+                <a href="file:///C:/l1/practice%20on%20js/new%20js%20e6/%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%9C%D7%A4%D7%A1%D7%97/users.html" id="${addUser.id++}" onclick="userNewPage(event)" >
                 <img src="${addUser.picture}" alt="img" id="photo" height="260px" width="200px" />
-              
+                </a>
                 <p> <small class="text-muted"> age: ${addUser.age} </small></p> 
                 <p> <small class="text-muted"> phone Number: ${addUser.phone} </small></p> 
                 <p> <small class="text-muted"> email: ${addUser.email} </small></p>
                 </div>
-                </a>` 
+                ` 
                 console.log(result_array);
                 
             }
@@ -97,7 +97,7 @@ async function results_list() {
             container.innerHTML += `<div class='item_class'>
             <h6> First Name: ${resultArray.name.first} </h6>
             <h6> Last Name:${resultArray.name.last} </h6>
-            <a href="file:///C:/l1/practice%20on%20js/new%20js%20e6/%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%9C%D7%A4%D7%A1%D7%97/users.html" id=${id_for_href++} onclick="userNewPage(event)" target="_blank">
+            <a href="file:///C:/l1/practice%20on%20js/new%20js%20e6/%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%9C%D7%A4%D7%A1%D7%97/users.html" id="${id_for_href++}" onclick="userNewPage(event)" >
             <img src="${resultArray.picture}" alt="img" class="photo" id="${resultArray._id}" />
             </a>
             <p <small class="text-muted"> phone: ${resultArray.phone}</small></p> 
