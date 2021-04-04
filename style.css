@@ -88,10 +88,6 @@ text-align: center;
     
 }
 
-.container > img{
-    width: 250px;
-}
-
 #Reset_form{
     display: none;
 }
@@ -104,19 +100,10 @@ text-align: center;
         grid-auto-rows: minmax(100px, auto);
         justify-content: center;
     }
-    /* #container_user{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    } */
+
 }
 
-/* @media screen and (min-width:1090px) {
 
-    #container_user{
-        margin-left: 500px;
-        width: 18rem;
-    }
-} */
 
 
 @media screen and (max-width: 650px) {
