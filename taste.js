@@ -18,7 +18,7 @@ function EmailConfirmation() {
     return false + alert(`Your emails are not the same`);
 }
 
-EMAIL2.addEventListener(`change` , EmailConfirmation)
+EMAIL2.addEventListener(`change` , EmailConfirmation);
 
 
 class User_information{
@@ -29,10 +29,10 @@ class User_information{
         this.phone = _phone;
         this.email = _email;
         this.picture = _picture;
-        this._id = _id_for_new_user
+        this._id = _id_for_new_user;
 
     }
-}
+};
 
 
 const baseAPI = `https://next.json-generator.com/api/json/get/NJ-UoW2Xq`;
@@ -66,32 +66,28 @@ async function results_list() {
 
             if(addUser.firsName.length > 0 && addUser.lastName.length > 0 &&addUser.age.length > 0 &&addUser.email.length > 0 &&addUser.phone.length > 0){
 
-                container.innerHTML += `<div id="div_new_user">
+                container.innerHTML += ` <a href="file:///C:/l1/practice%20on%20js/new%20js%20e6/%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%9C%D7%A4%D7%A1%D7%97/users.html" id=${addUser.id++} onclick="userNewPage(event)" target="_blank">
+                <div id="div_new_user">
                 <h5> First Name: ${addUser.firsName} </h5>
                 <h5> Last Name:${addUser.lastName} </h5>
-                <a href="file:///C:/l1/practice%20on%20js/new%20js%20e6/%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%9C%D7%A4%D7%A1%D7%97/users.html" id=${addUser.id++} onclick="userNewPage(event)" target="_blank">
+               
                 <img src="${addUser.picture}" alt="img" id="photo" height="260px" width="200px" />
-                </a>
+              
                 <p> <small class="text-muted"> age: ${addUser.age} </small></p> 
                 <p> <small class="text-muted"> phone Number: ${addUser.phone} </small></p> 
                 <p> <small class="text-muted"> email: ${addUser.email} </small></p>
-                </div>` 
+                </div>
+                </a>` 
                 console.log(result_array);
                 
             }
             else{
-                alert(`Missing details`)
+                alert(`Missing details`);
             }
             function ClearInput() {
                 form.innerHTML += `<input type="button" onclick="ClearInput()" id="Reset_form" value="Reset form">`
-            
-                addUser.firsName.value = ""
-                addUser.lastName.value = ""
-                addUser.age.value = "" 
-                addUser.email.value = ""
-                addUser.phone.value = ""
             }
-            ClearInput()
+            ClearInput();
         }
         BTN_2.addEventListener(`click` ,CreateNewUser );
 
@@ -142,7 +138,7 @@ async function results_list() {
         
        
 
-    }
+    };
     BTN_3.addEventListener(`click` , tabla);
 
     });
@@ -152,21 +148,20 @@ async function results_list() {
         console.log(reject);
     }
     finally{
-        lod_img.style.display =`none`
+        lod_img.style.display =`none`;
     }
 }
-results_list()
+results_list();
 
 
 function userNewPage(event){
     let userId = event.target.id; 
-    console.log(userId)
     let userPage = result_array.find(user => {
         return user._id == userId;
     });
-    localStorage.setItem("user", JSON.stringify(userPage))
-    console.log(localStorage.getItem("user"))
-}
+    localStorage.setItem("user", JSON.stringify(userPage));
+    console.log(localStorage.getItem("user"));
+};
 
 
 
