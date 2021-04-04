@@ -4,7 +4,7 @@ console.log(user)
 document.body.innerHTML = `
 <h1>Welcome to the user page</h1>
 <br>
-<div class="card" " id="container" >
+<div class="card" " class="container" >
 
   <img src="${user.picture}" class="card-img-top" id="user_img" alt="...">
   <div class="card-body">
