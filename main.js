@@ -9,9 +9,9 @@ document.body.innerHTML = `
   <img src="${user.picture}" class="card-img-top" id="user_img" alt="...">
   <div class="card-body">
     <h5 class="card-title">${user.name.first} ${user.name.last}</h5>
-    <p class="card-text"> age: ${user.age} </p>
-    <p class="card-text"> phone: ${user.phone}</p>
-    <p class="card-text"> email: ${user.email} </p>
+    <p> <small class="text-muted"> phone: ${user.phone}</small></p> 
+    <p> <small class="text-muted"> email: ${user.email}</small></p> 
+    <p> <small class="text-muted"> age: ${user.age}</small> </p> 
     <a href="http://127.0.0.1:5503/index.html"  class="btn btn-primary">go back to users</a>
   </div>
 </div>`

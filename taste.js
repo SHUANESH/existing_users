@@ -61,15 +61,13 @@ async function results_list() {
         result_array = await Serving_information();
 
         function CreateNewUser() {
-        let addUser = new User_information(FIRST_NAME.value,LAST_NAME.value, AGE.value, PHONE.value, EMAIL.value, src='https://picsum.photos/200/300' , count)
-            result_array.push(addUser);
-
+        let addUser = new User_information(FIRST_NAME.value,LAST_NAME.value, AGE.value, PHONE.value, EMAIL.value, src='https://picsum.photos/200/300' , count);
             if(addUser.firsName.length > 0 && addUser.lastName.length > 0 &&addUser.age.length > 0 &&addUser.email.length > 0 &&addUser.phone.length > 0){
 
                 container.innerHTML += ` 
                 <div id="div_new_user">
-                <h5> First Name: ${addUser.firsName} </h5>
-                <h5> Last Name:${addUser.lastName} </h5>
+                <h6> First Name: ${addUser.firsName} </h6>
+                <h6> Last Name:${addUser.lastName} </h6>
                 <a href="http://127.0.0.1:5503/users.html" id="${addUser._id}" onclick="userNewPage(event)" >
                 <img src="${addUser.picture}" alt="img" class="photo" id="${addUser._id}" />
                 </a>
@@ -105,9 +103,6 @@ async function results_list() {
             <p> <small class="text-muted"> age: ${addUser.age}</small> </p> 
             </div>
             ` 
-
-
-
         function tabla() {
         BTN_1.style.display = `none`
         BTN_2.style.display = `none`
@@ -116,31 +111,29 @@ async function results_list() {
         tabla_container.style.display = `inline`
         container.style.display = `none`
         newUser.style.display = `none`
-        Big_table.innerHTML +=  `
-        <tr class="tr">
+        Big_table.innerHTML +=`<tr class="tr">
         <td>
-        ${addUser.name.first}
+        ${searchResult.name.first}
         </td>
         <td>
-        ${addUser.name.last}
+        ${searchResult.name.last}
         </td>
         <td>
-        ${addUser.phone}
+        ${searchResult.phone}
         </td>
         <td>
-        ${addUser.email}
+        ${searchResult.email}
         </td>
         <td>
-        ${addUser.age}
+        ${searchResult.age}
         </td>
         </tr>`
-        
-       
+        console.log(searchResult);
 
-    };
+    }
     BTN_3.addEventListener(`click` , tabla);
 
-    });
+    })
 
     }
     catch (reject) {
