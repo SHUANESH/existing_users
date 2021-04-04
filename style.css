@@ -74,6 +74,8 @@ text-align: center;
 
 .photo{
     border-radius: 4px;
+    height:260px;
+     width:200px;
 }
 
 .photo:hover{
