@@ -112,6 +112,7 @@ async function results_list() {
         container.style.display = `none`
         newUser.style.display = `none`
         Big_table.innerHTML +=`<tr class="tr">
+      
         <td>
         ${searchResult.name.first}
         </td>
@@ -127,7 +128,14 @@ async function results_list() {
         <td>
         ${searchResult.age}
         </td>
-        </tr>`
+        <td>
+        <a href="http://127.0.0.1:5503/users.html"  onclick="userNewPage(event)" >
+        <img src="${searchResult.picture}" alt="img" class="tabla_img" id="${addUser._id}" width="60px" height="60px" />
+        </a>
+        </td>
+        </tr>
+       
+    `
         console.log(searchResult);
 
     }
