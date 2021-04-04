@@ -61,7 +61,7 @@ async function results_list() {
         result_array = await Serving_information();
 
         function CreateNewUser() {
-        let addUser = new User_information(FIRST_NAME.value,LAST_NAME.value, AGE.value, PHONE.value, EMAIL.value, src='https://picsum.photos/200/300' , count++)
+        let addUser = new User_information(FIRST_NAME.value,LAST_NAME.value, AGE.value, PHONE.value, EMAIL.value, src='https://picsum.photos/200/300' , count)
             result_array.push(addUser);
 
             if(addUser.firsName.length > 0 && addUser.lastName.length > 0 &&addUser.age.length > 0 &&addUser.email.length > 0 &&addUser.phone.length > 0){
@@ -70,8 +70,8 @@ async function results_list() {
                 <div id="div_new_user">
                 <h5> First Name: ${addUser.firsName} </h5>
                 <h5> Last Name:${addUser.lastName} </h5>
-                <a href="http://127.0.0.1:5503/users.html" id="${addUser.id++}" onclick="userNewPage(event)" >
-                <img src="${addUser.picture}" alt="img" id="photo" height="260px" width="200px" />
+                <a href="http://127.0.0.1:5503/users.html" id="${addUser._id}" onclick="userNewPage(event)" >
+                <img src="${addUser.picture}" alt="img" class="photo" id="${addUser._id}" />
                 </a>
                 <p> <small class="text-muted"> age: ${addUser.age} </small></p> 
                 <p> <small class="text-muted"> phone Number: ${addUser.phone} </small></p> 
@@ -92,17 +92,17 @@ async function results_list() {
         BTN_2.addEventListener(`click` ,CreateNewUser );
 
         result_array.forEach(searchResult => {
-            let resultArray = searchResult;
-            console.log(resultArray); 
+            addUser = searchResult;
+            console.log(addUser); 
             container.innerHTML += `<div class='item_class'>
-            <h6> First Name: ${resultArray.name.first} </h6>
-            <h6> Last Name:${resultArray.name.last} </h6>
+            <h6> First Name: ${addUser.name.first} </h6>
+            <h6> Last Name:${addUser.name.last} </h6>
             <a href="http://127.0.0.1:5503/users.html" id="${id_for_href++}" onclick="userNewPage(event)" >
-            <img src="${resultArray.picture}" alt="img" class="photo" id="${resultArray._id}" />
+            <img src="${addUser.picture}" alt="img" class="photo" id="${addUser._id}" />
             </a>
-            <p> <small class="text-muted"> phone: ${resultArray.phone}</small></p> 
-            <p> <small class="text-muted"> email: ${resultArray.email}</small></p> 
-            <p> <small class="text-muted"> age: ${resultArray.age}</small> </p> 
+            <p> <small class="text-muted"> phone: ${addUser.phone}</small></p> 
+            <p> <small class="text-muted"> email: ${addUser.email}</small></p> 
+            <p> <small class="text-muted"> age: ${addUser.age}</small> </p> 
             </div>
             ` 
 
