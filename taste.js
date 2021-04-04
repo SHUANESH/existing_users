@@ -119,19 +119,19 @@ async function results_list() {
         Big_table.innerHTML +=  `
         <tr class="tr">
         <td>
-        ${resultArray.name.first}
+        ${addUser.name.first}
         </td>
         <td>
-        ${resultArray.name.last}
+        ${addUser.name.last}
         </td>
         <td>
-        ${resultArray.phone}
+        ${addUser.phone}
         </td>
         <td>
-        ${resultArray.email}
+        ${addUser.email}
         </td>
         <td>
-        ${resultArray.age}
+        ${addUser.age}
         </td>
         </tr>`
         
