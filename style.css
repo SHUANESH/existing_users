@@ -1,0 +1,139 @@
+
+body{
+    font-family:'Syne Mono', monospace;
+    background-color:#effdff ;
+    text-align: center;
+}
+ p ,h5{
+    text-align: center;
+    margin: 50px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+}
+#div_new_user{
+   text-align: center;
+}
+#container{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    grid-auto-rows: minmax(200px, auto);
+    justify-content: center;
+    text-align: center;
+}
+
+.logo_img{
+    width: 95px;
+    height: 100px;
+}
+
+
+input , label{
+font-size: 18px;
+text-align: center;
+}
+
+#form{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    grid-auto-rows: minmax(70px, auto);
+    justify-content: center;
+    text-align: center;
+    
+}
+
+
+#div_form_container{
+    background-color: rgb(238, 235, 235);
+    height: fit-content;
+}
+#btn1{
+   margin-bottom: 20px;
+    
+}
+
+.ppp{
+    font-size: 50px;
+}
+.a-svg{
+    margin-top:  40px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(20px, auto);
+    justify-content: center;
+    text-align: center;
+    size: 40px;
+}
+
+.photo{
+    border-radius: 4px;
+}
+
+.photo:hover{
+    box-shadow: 15px -16px 7px -8px rgba(231, 252, 255, 0.844);
+    width: 195px;
+    height: 255px;
+}
+#tabla_container{
+    display: none;
+    
+}
+
+#container{
+    width: 80rem
+}
+#Reset_form{
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    #container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        grid-auto-rows: minmax(100px, auto);
+        justify-content: center;
+    }
+    /* #container_user{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    } */
+}
+
+/* @media screen and (min-width:1090px) {
+
+    #container_user{
+        margin-left: 500px;
+        width: 18rem;
+    }
+} */
+
+
+@media screen and (max-width: 650px) {
+    #container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+        grid-auto-rows: minmax(80px, auto);
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+        grid-auto-rows: minmax(200px, auto);
+        justify-content: center;
+    }
+
+
+}
