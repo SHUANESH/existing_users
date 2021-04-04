@@ -12,7 +12,7 @@ document.body.innerHTML = `
     <p class="card-text"> age: ${user.age} </p>
     <p class="card-text"> phone: ${user.phone}</p>
     <p class="card-text"> email: ${user.email} </p>
-    <a href="file:///C:/l1/practice%20on%20js/new%20js%20e6/%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%20%D7%9C%D7%A4%D7%A1%D7%97/index.html"  class="btn btn-primary">go back to users</a>
+    <a href="http://127.0.0.1:5503/index.html"  class="btn btn-primary">go back to users</a>
   </div>
 </div>`
 

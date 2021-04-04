@@ -35,7 +35,7 @@ class User_information{
 };
 
 
-const baseAPI = `https://next.json-generator.com/api/json/get/NJ-UoW2Xq`;
+const SERVER_API = `https://next.json-generator.com/api/json/get/NJ-UoW2Xq`;
 let container = document.getElementById(`container`);
 let tabla_container = document.getElementById(`tabla_container`);
 let Big_table = document.getElementById(`Big_table`);
@@ -44,7 +44,7 @@ let lod_img = document.getElementById(`lod_img`);
 let form = document.getElementById(`form`);
 
 function Serving_information() {
-    return fetch(`${baseAPI}` , {})
+    return fetch(`${SERVER_API}`, {})
     .then((res)=>{return res.json()})
     
 };
@@ -109,7 +109,6 @@ async function results_list() {
 
 
         function tabla() {
-
         BTN_1.style.display = `none`
         BTN_2.style.display = `none`
         BTN_3.style.display = `none`  
